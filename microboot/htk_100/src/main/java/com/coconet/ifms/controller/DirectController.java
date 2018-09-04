@@ -19,5 +19,15 @@ public class DirectController {
 		return "index";
 		
 	}
+	@RequestMapping("about")
+	public String about() {
+		return "about";
+		
+	}
+	@RequestMapping("product")
+	public String product() {
+		return "product";
+		
+	}
 
 }

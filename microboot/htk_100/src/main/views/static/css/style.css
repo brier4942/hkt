@@ -399,7 +399,7 @@ p, .seller-slider .media-body .media-heading {
 	height: auto;
 	background-color: #fff;
 	padding: 20px 0;
-	display: none;
+	/* display: none; */
 }
 
 .content ul li a {
@@ -728,6 +728,9 @@ header nav.navbar.bootsnav li.dropdown ul.dropdown-menu > li > a:hover {
 header nav.navbar.bootsnav li.dropdown ul.dropdown-menu {
 	border: none !important;
 	box-shadow: 0 0 10px rgba(0,0,0,.10);
+	max-height:500px;
+	overflow-y:scroll;
+	overflow-x:hidden;
 }
 
 header .attr-nav > ul > li > a {
@@ -2095,6 +2098,7 @@ form.newsletter .input-group-addon:hover {
 
 /* ------------------ Shop  ------------------ */
 #cart {
+	padding-top:50px;
 }
 
 .cart-form .btn-dark:hover, .cart-form .btn-dark:focus,
@@ -2350,6 +2354,11 @@ input[type="number"] {
 .shop_tab .tab_content {
 	padding: 20px 0;
 	width: 100%;
+}
+.shop_tab .tab_content img{
+	width:100%;
+	height:auto;
+	vertical-align: top;
 }
 
 .tab_content ol.commentlist li {

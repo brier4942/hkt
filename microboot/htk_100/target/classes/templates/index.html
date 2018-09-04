@@ -1,236 +1,20 @@
 ﻿<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+  	<meta charset="utf-8">
+    <title>首页</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>首页</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" /> 
     <meta name="author" content="" />
     <meta name="copyright" content="" />
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="../../css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="../../css/owl.transitions.css">
-    <link rel="stylesheet" type="text/css" href="../../css/bootsnav.css">
-    <link rel="stylesheet" type="text/css" href="../../css/settings.css">
-    <link rel="stylesheet" type="text/css" href="../../css/loader.css">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
-    <link rel="shortcut icon" href="../../images/favicon.png">
-    <!--[if lt IE 9]>
-<script src="js/html5shiv.min.js"></script>
-  <script src="js/respond.min.js"></script>
-<![endif]-->
   </head>
   <body>
-  
-  <div th:include="head :: onloadJS"></div>
+  	<div th:include="head :: onloadCSS"></div>
+  	<div th:include="foot :: onloadJS"></div>
+  	<div th:include="commonHeader :: onloadHeader"></div>
     <div id="app">
-      <!--Loader-->
-      <div class="loader">
-        <div class="spinner-load">
-          <div class="dot1">
-          </div>
-          <div class="dot2">
-          </div>
-        </div>
-      </div>
-      <!--HEADER-->
-      <header>
-        <nav class="navbar navbar-default navbar-sticky bootsnav">
-          <div class="container">
-            <div class="attr-nav">
-              <ul>
-                <li class="search">
-                  <a href="#.">
-                    <i class="fa fa-search">
-                    </i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!-- Start Header Navigation -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-                <i class="fa fa-bars">
-                </i>
-              </button>
-              <a class="navbar-brand" href="index.html">
-                <img src="../../images/logo.png" class="logo" alt="">
-              </a>
-            </div>
-            <!-- End Header Navigation -->
-            <div class="collapse navbar-collapse" id="navbar-menu">
-              <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-                <li class="dropdown active">
-                  <a href="#." class="dropdown-toggle" data-toggle="dropdown">首页
-                  </a>
-                </li>
-                <li class="dropdown megamenu-fw">
-                  <a href="#." class="dropdown-toggle" data-toggle="dropdown">空调分类
-                  </a>
-                  <ul class="dropdown-menu megamenu-content" role="menu">
-                    <li>
-                      <div class="row">
-                        <div class="col-menu col-md-4">
-                          <h5 class="title heading_border">格力变频空调
-                          </h5>
-                          <div class="content">
-                            <ul class="menu-col">
-                              <li>
-                                <a href="blog1.html">变频挂机</a>
-                                <div class="content-child clearfix">
-                                  <ul>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </li>
-                              <li>
-                                <a href="blog2.html">变频柜机</a>
-                                <div class="content-child clearfix">
-                                  <ul>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                    <li>
-                                      <a href="">系列1</a>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-menu col-md-4">
-                          <h5 class="title heading_border">格力定频空调
-                          </h5>
-                          <div class="content">
-                            <ul class="menu-col">
-                              <li>
-                                <a href="checkout.html">定频挂机
-                                </a>
-                              </li>
-                              <li>
-                                <a href="product_detail.html">定频柜机
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="col-menu col-md-4">
-                          <h5 class="title heading_border">格力中央空调
-                          </h5>
-                          <div class="content">
-                            <ul class="menu-col">
-                              <li>
-                                <a href="#.">家用中央空调
-                                </a>
-                              </li>
-                              <li>
-                                <a href="#.">商用中央空调
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div> 
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="about.html">关于我们
-                  </a>
-                </li>
-                <li class="dropdown">
-                  <a href="#." class="dropdown-toggle" data-toggle="dropdown">语言
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="grid.html">中文
-                      </a>
-                    </li>
-                    <li>
-                      <a href="grid_list.html">英文
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-            <div class=" search-toggle">
-              <div class="top-search">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search">
-                  <span class="input-group-addon">
-                    <i class="fa fa-search">
-                    </i>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>   
-        </nav>
-      </header>
       <section class="rev_slider_wrapper">  
         <div>
           <!-- Swiper -->
@@ -1296,18 +1080,6 @@
         </div>
       </div>
     </div>
-    <script src="../../js/jquery-2.2.3.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/vue.js"></script>
-    <script src="../../js/bootsnav.js"></script>
-    <script src="../../js/swiper.min.js"></script>
-    <script src="../../js/jquery.parallax-1.1.3.js"></script>
-    <script src="../../js/jquery.appear.js"></script>
-    <script src="../../js/owl.carousel.min.js"></script>
-    <script src="../../js/kinetic.js"></script>
-    <script src="../../js/jquery.final-countdown.js"></script>
-    <script src="../../js/functions.js"></script>
-
     <script type="text/javascript">
       new Vue({
         el: "#app",
@@ -1316,12 +1088,12 @@
             banner_slide_height : '500px',
             banner_proportion:1/3,
             screenWidth: document.body.clientWidth,
+            bannerList : [], /*轮播图列表*/
         },
         watch: {
             'screenWidth': function (o) {
               this.caclu_swiper_height(o);
-            },
-
+            }
         },
         init : function (){
           this.$nextTick(function () {
@@ -1329,8 +1101,7 @@
           })
         },
         created: function () {
-            
-
+			this.getBanner();
         },
         updated: function () {
             this.$nextTick(function () {
@@ -1360,12 +1131,24 @@
         methods: {
             caclu_swiper_height : function (val){
                 this.banner_slide_height = val * this.banner_proportion + "px";
+            },
+            getBanner : function (){
+            	var that = this;
+            	$.ajax({
+            		url : '/banner/getall',
+            		data : {},
+            		type : "post",
+            		success : function (data){
+            			data = JSON.parse(data);
+            			console.log(data);
+            			that.$nextTick(function () {
+                			that.bannerList = data;
+            			})
+            		}
+            	})
             }
         }
     });
-      
-      //URL = /category/getmenu
-      //URL = /category/getmenu  {carid:"1",...}
     </script>
   </body>
 </html>
