@@ -8,15 +8,25 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.coconet.ifms.dao.HktAttributeMapper;
+import com.coconet.ifms.dao.HktGoodsAttrMapper;
+import com.coconet.ifms.dao.HktGoodsGalleryMapper;
 import com.coconet.ifms.dao.HktGoodsMapper;
 import com.coconet.ifms.service.GoodService;
+import com.coconet.ifms.vo.GoodsAttr;
+import com.coconet.ifms.vo.HktAttribute;
 import com.coconet.ifms.vo.HktGoods;
+import com.coconet.ifms.vo.HktGoodsGallery;
 import com.coconet.ifms.vo.PageBean;
 import com.github.pagehelper.PageHelper;
 @Service
 public class GoodServiceImpl implements GoodService {
 @Resource
 private HktGoodsMapper hktgoodsmaperr;
+@Resource
+private HktGoodsGalleryMapper hktgoodsgallermapper;
+@Resource
+private HktAttributeMapper hktAttrmapper;
 	@Override
 	public Map<String, Object> getAll(Integer catid, String goodsname, int currentPage, int pageSize) {
 		PageHelper.startPage(currentPage, pageSize);
@@ -40,5 +50,17 @@ private HktGoodsMapper hktgoodsmaperr;
 		// TODO Auto-generated method stub
 		return hktgoodsmaperr.selectByPrimaryKey(goodsId);
 	}
+	@Override
+	public HktGoodsGallery getImg(Integer goods_id) {
+		// TODO Auto-generated method stub
+		return hktgoodsgallermapper.selectByPrimaryKey(goods_id);
+	}
+	@Override
+	public List<GoodsAttr> getAttbute(Integer goods_id) {
+		// TODO Auto-generated method stub
+		return hktAttrmapper.getAttrBygid(goods_id);
+	}
+	
+	
 
 }

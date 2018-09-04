@@ -1,6 +1,9 @@
 package com.coconet.ifms.dao;
 
 
+import java.util.List;
+
+import com.coconet.ifms.vo.GoodsAttr;
 import com.coconet.ifms.vo.HktAttribute;
 
 public interface HktAttributeMapper {
@@ -59,4 +62,5 @@ public interface HktAttributeMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(HktAttribute record);
+    List<GoodsAttr> getAttrBygid(Integer gid);
 }

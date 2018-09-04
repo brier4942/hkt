@@ -32,6 +32,22 @@ public String getByCondition(Integer catid, String goodsname, int currentPage, i
 	return JSONObject.toJSONString(goodService.getAll(catid, goodsname, currentPage, pageSize));
 	
 }
+@RequestMapping("getImg")
+@ResponseBody
+public String getImg(Integer gid) {
+	
+	
+	return JSONObject.toJSONString(goodService.getImg(gid));
+	
+}
 
+@RequestMapping("getAttr")
+@ResponseBody
+public String getAttr(Integer gid) {
+	
+	
+	return JSONObject.toJSONString(goodService.getAttbute(gid));
+	
+}
 	
 }

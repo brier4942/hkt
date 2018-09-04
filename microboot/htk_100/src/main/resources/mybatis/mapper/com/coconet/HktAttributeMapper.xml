@@ -225,4 +225,10 @@
       is_show_img = #{isShowImg,jdbcType=TINYINT}
     where attr_id = #{attrId,jdbcType=SMALLINT}
   </update>
+  <select id="getAttrBygid" parameterType="int" resultType="GoodsAttr">
+  
+  select  a.attr_name as attrName ,b.attr_value as attrValue, b.goods_id as goodsId  from
+   hkt_goods_attr as b  left join hkt_attribute as a on a.attr_id=b.attr_id where goods_id = #{gid} 
+ 
+  </select>
 </mapper>
