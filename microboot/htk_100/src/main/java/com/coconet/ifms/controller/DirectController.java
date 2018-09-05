@@ -29,5 +29,10 @@ public class DirectController {
 		return "product";
 		
 	}
+	@RequestMapping("grid")
+	public String grid() {
+		return "grid";
+		
+	}
 
 }

@@ -86,31 +86,6 @@ jQuery(function($) {'use strict';
 	    $("ul.tabs li").removeClass("active");
 	    $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
     });
-	 
-  
-  //TO Filter the Grids
-    $('.view-button.grid').on('click', function(){
-    	if($(this).hasClass('active')) return false;
-    	$('.shop-grid').fadeOut(function(){
-    		$('.shop-grid').removeClass('list-view').addClass('grid-view');
-    		$(this).fadeIn();
-    	});
-    	$(this).parent().find('.active').removeClass('active');
-    	$(this).addClass('active');
-    });
-
-    $('.view-button.list').on('click', function(){
-    	if($(this).hasClass('active')) return false;
-    	$('.shop-grid').fadeOut(function(){
-    		$('.shop-grid').removeClass('grid-view').addClass('list-view');
-    		$(this).fadeIn();
-    	});
-    	$(this).parent().find('.active').removeClass('active');
-    	$(this).addClass('active');
-    });
-	 
-	 
-	 // popup
   
   
   
@@ -124,7 +99,8 @@ jQuery(function($) {'use strict';
 		  navigationText :["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		  items : 4,
 		  itemsDesktop : [1199,3],
-		  itemsDesktopSmall : [979,2]
+		  itemsDesktopSmall : [979,2],
+	      itemsMobile:[500,2],
 	 });
 	 $("#fourCol-slider_2").owlCarousel({
 		  autoPlay: false,
@@ -133,7 +109,8 @@ jQuery(function($) {'use strict';
 		  navigationText :["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 		  items : 4,
 		  itemsDesktop : [1199,3],
-		  itemsDesktopSmall : [979,2]
+		  itemsDesktopSmall : [979,2],
+	      itemsMobile:[500,2],
 	 });
 	 
 	 //Brands

@@ -31,8 +31,8 @@ private HktAttributeMapper hktAttrmapper;
 	public Map<String, Object> getAll(Integer catid, String goodsname, int currentPage, int pageSize) {
 		PageHelper.startPage(currentPage, pageSize);
 		Map<String, Object> map=new HashMap<>();
-		map.put("catid",catid);
-		map.put("goodsname","%" +goodsname+ "%");
+		map.put("catid",catid);	
+	    map.put("goodsname",goodsname);
 		List<HktGoods> li = hktgoodsmaperr.selectByCondition(map);
 		int sum = hktgoodsmaperr.countByCondition(map);
 		PageBean<HktGoods> pageData = new PageBean<>(currentPage, pageSize, sum);
@@ -51,7 +51,7 @@ private HktAttributeMapper hktAttrmapper;
 		return hktgoodsmaperr.selectByPrimaryKey(goodsId);
 	}
 	@Override
-	public HktGoodsGallery getImg(Integer goods_id) {
+	public List<HktGoodsGallery> getImg(Integer goods_id) {
 		// TODO Auto-generated method stub
 		return hktgoodsgallermapper.selectByPrimaryKey(goods_id);
 	}

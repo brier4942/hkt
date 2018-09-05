@@ -15,7 +15,7 @@ import com.coconet.ifms.vo.HktGoodsGallery;
 public interface GoodService {
 	public Map<String, Object> getAll( Integer cat_id,String goodsname, int currentPage, int pageSize) ;
 	public HktGoods getByid( Integer goods_id) ;
-	public HktGoodsGallery getImg( Integer goods_id) ;
+	public List<HktGoodsGallery> getImg( Integer goods_id) ;
 	public List<GoodsAttr> getAttbute( Integer goods_id);
 
 }
